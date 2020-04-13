@@ -9,12 +9,12 @@ An action to submit a run to your aml workspace with full flexibility
 |amlpipelinefile| yes | None | name of the file which contains the configutaion for setting up aml runs 
 
 ### This action assumes you have all the necessary resources already set up before you use this action. if you don't have the resources used , you must first either create them or use
-    other actions which support resource creation before using this.
-    - Creation of or attachment to an AML Workspace with [azure/aml-workspace](https://github.com/Azure/aml-workspace)
-    - Managing Azure compute resources with [azure/aml-compute](https://github.com/Azure/aml-compute): 
-    - Managing Azure Machine Learning experimentation and pipeline runs with [azure/aml-run](https://github.com/Azure/aml-run)
-    - Model Registration in Azure Machine Learning [azure/aml-registermodel](https://github.com/Azure/aml-registermodel)
-    - Deployment to Azure Container Instances or Azure Kubernetes Service with [azure/aml-deploy](https://github.com/Azure/aml-deploy)
+other actions which support resource creation before using this.
+- Creation of or attachment to an AML Workspace with [azure/aml-workspace](https://github.com/Azure/aml-workspace)
+- Managing Azure compute resources with [azure/aml-compute](https://github.com/Azure/aml-compute): 
+- Managing Azure Machine Learning experimentation and pipeline runs with [azure/aml-run](https://github.com/Azure/aml-run)
+- Model Registration in Azure Machine Learning [azure/aml-registermodel](https://github.com/Azure/aml-registermodel)
+- Deployment to Azure Container Instances or Azure Kubernetes Service with [azure/aml-deploy](https://github.com/Azure/aml-deploy)
 
 
 The action assumes you have a configuration yaml file at ".ml/azure" folder in your root directory. 
