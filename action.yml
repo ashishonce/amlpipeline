@@ -1,0 +1,16 @@
+name: "action to submit script runs on pipeline runs to user workspace"
+description: "allows full flexibitiy to user to define his custom pipeline"
+author: "ashishonce"
+inputs:
+  azureCredentials:
+    description: "azure credentials"
+    required: true
+  amlpipelinefile: 
+    description : "name of the file which represents the full configuraiotn and pipeline steps for submission"
+    required: true
+branding:
+  icon: chevron-up
+  color: 'green'
+runs:
+  using: "docker"
+  image: "Dockerfile"
