@@ -10,7 +10,6 @@ def main(workspace,inputs):
         name=inputs["compute"]
     )
 
-
     step = PythonScriptStep(name=inputs["step_name"],
                             script_name=inputs["train_script"], 
                             compute_target= compute_target, 
