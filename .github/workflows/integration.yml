@@ -1,0 +1,22 @@
+name: Integration Test
+on:
+  push:
+    paths:
+      - 'train-on-amlcompute/**'
+      - 'code/**'
+      - '.github/workflows/integration.yml'
+      - 'action.yml'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repository
+        id: checkout_repository
+        uses: actions/checkout@master
+
+      - name: Self test
+        id: selftest
+        uses: ashishonce/amlpipeline@master
+        with:
+          azureCredentials: ${{ secrets.AZURE_CREDENTIALS }}
+          amlpipelinefile: "amlpipeline.yaml"

@@ -12,16 +12,16 @@ RunSubmissions:
       source_directory: "./train-on-amlcompute/train1" # this represents the source directory where your runConfig file is present
       train_script : "train1.py"
 
-  # - name : "amlcomputeTraining2"
-  #   workspace: 'ashkumadevtestwkrspace'
-  #   run_config_file: "/train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
-  #   run_config_function : "main"
-  #   # these values will be sent as input to the runConfig file, user may decide what to do with those params, if he has hardcoded all values then he need not to write these values ,   
-  #   inputs : 
-  #     compute : 'cpu-cluster'
-  #     experiment : "train-aml-compute"  # at a time you can only submit to a single experiment
-  #     source_directory: "./train-on-amlcompute/train1" # this represents the source directory where your runConfig file is present
-  #     train_script : "train2.py"
+  - name : "amlcomputeTraining2"
+    workspace: 'ashkumadevtestwkrspace'
+    run_config_file: "/train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
+    run_config_function : "main"
+    # these values will be sent as input to the runConfig file, user may decide what to do with those params, if he has hardcoded all values then he need not to write these values ,   
+    inputs : 
+      compute : 'cpu-cluster'
+      experiment : "train-aml-compute"  # at a time you can only submit to a single experiment
+      source_directory: "./train-on-amlcompute/train1" # this represents the source directory where your runConfig file is present
+      train_script : "train2.py"
     
     
 
