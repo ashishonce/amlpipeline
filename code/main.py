@@ -27,7 +27,7 @@ def getRunSubmissionObject(ws, run_config_file_path, run_config_function, inputs
     sys.path.insert(0, f"{root}")
     run_config_file_path = run_config_file_path
     run_config_file_function_name = run_config_function
-
+    print(root)
     print("::debug::Importing module")
     run_config_file_path = f"{run_config_file_path}.py" if not run_config_file_path.endswith(".py") else run_config_file_path
     try:
