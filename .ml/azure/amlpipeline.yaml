@@ -3,7 +3,7 @@
 RunSubmissions:
   - name : "amlcomputeTraining"
     workspace: 'ashkumadevtestwkrspace'
-    run_config_file: "/train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
+    run_config_file: "./train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
     run_config_function : "main"
     # these values will be sent as input to the runConfig file, user may decide what to do with those params, if he has hardcoded all values then he need not to write these values,list is not restricted to this, user can define infinite list of inpute here  
     inputs : 
@@ -14,7 +14,7 @@ RunSubmissions:
 
   - name : "amlcomputeTraining2"
     workspace: 'ashkumadevtestwkrspace'
-    run_config_file: "/train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
+    run_config_file: "./train-on-amlcompute/train1/run_config1.py" # this file represens the file which will return a submission object to submit. it can be anything like ScriptRun, Estimator etc.
     run_config_function : "main"
     # these values will be sent as input to the runConfig file, user may decide what to do with those params, if he has hardcoded all values then he need not to write these values ,   
     inputs : 
@@ -33,7 +33,7 @@ PipelineSubmissions:
     experiment : "train-aml-compute_pipeline"
     steps :
       - step_name : "train"
-        pipelineStep_run_config_file: "/train-on-amlcompute/pipelinetrain/pipelineStepConfig1.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
+        pipelineStep_run_config_file: "./train-on-amlcompute/pipelinetrain/pipelineStepConfig1.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
         run_config_function : "main"
         inputs :
           source_directory: "./train-on-amlcompute/pipelinetrain" # this represents the source directory where your runConfig file is present
@@ -42,7 +42,7 @@ PipelineSubmissions:
           step_name : "train"
 
       - step_name : "compare"
-        pipelineStep_run_config_file: "/train-on-amlcompute/pipelinetrain/pipelineStepConfig1.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
+        pipelineStep_run_config_file: "./train-on-amlcompute/pipelinetrain/pipelineStepConfig1.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
         run_config_function : "main"
         inputs :
           source_directory: "./train-on-amlcompute/pipelinetrain" # this represents the source directory where your runConfig file is present
@@ -51,7 +51,7 @@ PipelineSubmissions:
           step_name : "compare"
 
       - step_name : "extract"
-        pipelineStep_run_config_file: "/train-on-amlcompute/pipelinetrain/pipelineStepConfig2.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
+        pipelineStep_run_config_file: "./train-on-amlcompute/pipelinetrain/pipelineStepConfig2.py" # this file represens the file which will return a pipeline Step object to submit. it can be anything like PythonScriptStep, DataTransferStep, PythonScriptStep etc.
         run_config_function : "main"
         inputs :
           source_directory: "./train-on-amlcompute/pipelinetrain" # this represents the source directory where your runConfig file is present
