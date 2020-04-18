@@ -5,6 +5,7 @@ on:
       - 'train-on-amlcompute/**'
       - 'code/**'
       - '.github/workflows/integration.yml'
+      - 'action.yml'
 jobs:
   build:
     runs-on: ubuntu-latest
